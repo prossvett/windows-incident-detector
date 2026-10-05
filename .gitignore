@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Личные БД и отчёты
+incidents.db
+reports/
+*.db
+
+# VSCode
+.vscode/
+.idea/
+
+# ОС
+Thumbs.db
+.DS_Store

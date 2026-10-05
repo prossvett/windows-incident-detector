@@ -1,0 +1,85 @@
+{
+  "rules": [
+    {
+      "name": "BruteForce",
+      "event_id": 4625,
+      "description": "Множественные неудачные попытки входа (брутфорс)",
+      "severity": "high",
+      "threshold": 5,
+      "time_window": 600,
+      "conditions": {}
+    },
+    {
+      "name": "SuspiciousPowerShell",
+      "event_id": 4104,
+      "description": "Подозрительный скрипт PowerShell",
+      "severity": "medium",
+      "threshold": 1,
+      "time_window": 60,
+      "conditions": {
+        "keywords": [
+          "Invoke-Expression",
+          "IEX",
+          "DownloadString",
+          "EncodedCommand",
+          "FromBase64String",
+          "Net.WebClient"
+        ]
+      }
+    },
+    {
+      "name": "UserCreated",
+      "event_id": 4720,
+      "description": "Создание новой учётной записи",
+      "severity": "high",
+      "threshold": 1,
+      "time_window": 60,
+      "conditions": {}
+    },
+    {
+      "name": "AdminGroupAdded",
+      "event_id": 4732,
+      "description": "Добавление пользователя в привилегированную группу",
+      "severity": "critical",
+      "threshold": 1,
+      "time_window": 60,
+      "conditions": {}
+    },
+    {
+      "name": "AuditDisabled",
+      "event_id": 4719,
+      "description": "Изменение политики аудита",
+      "severity": "high",
+      "threshold": 1,
+      "time_window": 60,
+      "conditions": {}
+    },
+    {
+      "name": "LogCleared",
+      "event_id": 1102,
+      "description": "Очистка журнала Security",
+      "severity": "critical",
+      "threshold": 1,
+      "time_window": 60,
+      "conditions": {}
+    },
+    {
+      "name": "ServiceInstalled",
+      "event_id": 7045,
+      "description": "Установка новой службы",
+      "severity": "medium",
+      "threshold": 1,
+      "time_window": 60,
+      "conditions": {}
+    },
+    {
+      "name": "SpecialPrivileges",
+      "event_id": 4672,
+      "description": "Назначение специальных привилегий",
+      "severity": "medium",
+      "threshold": 10,
+      "time_window": 300,
+      "conditions": {}
+    }
+  ]
+}
